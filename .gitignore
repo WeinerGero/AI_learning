@@ -1,1 +1,8 @@
-/tests
+tests
+pytest.ini
+
+.venv
+
+__pycache__
+*.pyc
+.pytest_cache
