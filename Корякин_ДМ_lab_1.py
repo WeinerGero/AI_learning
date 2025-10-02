@@ -78,7 +78,8 @@ def bayesian_probability(a, ba):
         raise ValueError("a и ba должны быть в диапазоне [0, 1].")
     if ba == 0.0:
         return 0.0
-    return (ba * a) / b
+    pb = a * ba + (1 - a) * (1 - ba)
+    return (a * ba) / pb
 
 
 if __name__ == "__main__":
