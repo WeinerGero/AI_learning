@@ -73,13 +73,8 @@ def conditional_probability(values):
 
     return count_both_one / count_first_one
 
-def bayesian_probability(a, ba):
-    if not (0.0 <= a <= 1.0) or not (0.0 <= ba <= 1.0):
-        raise ValueError("a и ba должны быть в диапазоне [0, 1].")
-    if ba == 0.0:
-        return 0.0
-    pb = a * ba + (1 - a) * (1 - ba)
-    return (a * ba) / pb
+def bayesian_probability(a, b, ba):
+    return (ba * a) / b
 
 
 if __name__ == "__main__":
