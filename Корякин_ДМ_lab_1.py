@@ -78,10 +78,10 @@ def bayesian_probability(a, b, ba):
 
 
 if __name__ == "__main__":
-    print("Simple Probability (3 of 10):", simple_probability(3, 10))
-    print("Logical OR (3 or 2 of 10):", logical_or(3, 2, 10))
-    print("Logical AND (3 of 10 and 2 of 8):", logical_and(3, 2, 10, 8))
-    print("Expected Value:", expected_value((1, 2, 3), (0.2, 0.5, 0.3)))
-    sample_pairs = ((1, 1), (1, 0), (0, 1), (1, 1))
-    print("Conditional Probability:", conditional_probability(sample_pairs))
-    print("Bayesian Probability:", bayesian_probability(0.1, 0.8))
+    # Примеры использования функций
+    print(simple_probability(3, 10))  # 0.3
+    print(logical_or(3, 4, 10))       # 0.7
+    print(logical_and(3, 4, 10, 10))  # 0.12
+    print(expected_value((1, 2, 3), (0.2, 0.5, 0.3)))  # 2.1
+    print(conditional_probability(((1, 1), (1, 0), (0, 1), (1, 1))))  # 0.6666666666666666
+    print(bayesian_probability(0.3, 0.5, 0.6))  # 0.36
