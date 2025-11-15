@@ -118,6 +118,9 @@ def classification_training(data: pd.DataFrame):
     Выполняет обучение и оценку моделей KNN и Decision Tree на
     предобработанных данных, выводит метрики и строит дерево решений.
     """
+    
+    data = prepare_data(data)
+    
     if not isinstance(data, pd.DataFrame):
         logging.error(f"Ожидается DataFrame, получен {type(data)}.")
         return
@@ -199,8 +202,7 @@ def main():
                 engine='python',
                 on_bad_lines='skip'
             )
-            prepared_data = prepare_data(raw_data)
-            classification_training(data=prepared_data)
+            classification_training(data=raw_data)
 
         except Exception as e:
             logging.error(f"Произошла ошибка при обработке данных: {e}")
